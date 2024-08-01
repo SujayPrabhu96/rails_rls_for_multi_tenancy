@@ -68,3 +68,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'rls_rails', github: 'sbiastoch/rls_rails'
