@@ -10,9 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_01_063802) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_01_064026) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "order_purchase_order_line_items", force: :cascade do |t|
+    t.integer "line_number"
+    t.string "sku_code"
+    t.string "sku_description"
+    t.string "uom"
+    t.integer "ordered_qty"
+    t.integer "received_qty"
+    t.string "sku_holdcode"
+    t.string "sku_type"
+    t.bigint "purchase_order_id", null: false
+    t.integer "tenant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["purchase_order_id"], name: "index_order_purchase_order_line_items_on_purchase_order_id"
+  end
 
   create_table "order_purchase_orders", force: :cascade do |t|
     t.string "order_number"
@@ -35,4 +51,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_01_063802) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "order_purchase_order_line_items", "order_purchase_orders", column: "purchase_order_id"
 end

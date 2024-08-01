@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_number: 1
+  sku_code: MyString
+  sku_description: MyString
+  uom: MyString
+  ordered_qty: 1
+  received_qty: 1
+  sku_holdcode: MyString
+  sku_type: MyString
+  purchase_order: one
+  tenant_id: 1
+
+two:
+  line_number: 1
+  sku_code: MyString
+  sku_description: MyString
+  uom: MyString
+  ordered_qty: 1
+  received_qty: 1
+  sku_holdcode: MyString
+  sku_type: MyString
+  purchase_order: two
+  tenant_id: 1
