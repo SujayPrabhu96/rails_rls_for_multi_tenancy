@@ -1,0 +1,21 @@
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Purchase orders" %>
+
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Purchase orders</h1>
+    <%= link_to "New purchase order", new_order_purchase_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
+
+  <div id="order_purchase_orders" class="min-w-full">
+    <% @order_purchase_orders.each do |order_purchase_order| %>
+      <%= render order_purchase_order %>
+      <p>
+        <%= link_to "Show this purchase order", order_purchase_order, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      </p>
+    <% end %>
+  </div>
+</div>

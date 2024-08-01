@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_number: MyString
+  external_order_id: MyString
+  po_type: MyString
+  status: MyString
+  business_unit: MyString
+  order_date: 2024-08-01
+  receipt_date: 2024-08-01
+  estimated_lpn: 1
+  tenant_id: 1
+
+two:
+  order_number: MyString
+  external_order_id: MyString
+  po_type: MyString
+  status: MyString
+  business_unit: MyString
+  order_date: 2024-08-01
+  receipt_date: 2024-08-01
+  estimated_lpn: 1
+  tenant_id: 1

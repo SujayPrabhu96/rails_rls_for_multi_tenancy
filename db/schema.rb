@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_01_063728) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_01_063802) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "order_purchase_orders", force: :cascade do |t|
+    t.string "order_number"
+    t.string "external_order_id"
+    t.string "po_type"
+    t.string "status"
+    t.string "business_unit"
+    t.date "order_date"
+    t.date "receipt_date"
+    t.integer "estimated_lpn"
+    t.integer "tenant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "warehouses", force: :cascade do |t|
     t.string "name"

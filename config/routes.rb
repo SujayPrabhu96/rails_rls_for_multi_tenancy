@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :order do
+    resources :purchase_orders
+  end
   resources :warehouses
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
