@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skus
   namespace :order do
     resources :purchase_orders
   end
