@@ -18,6 +18,9 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # credentials of non superuser
+  username: <%= ENV["RAILS_RLS_FOR_MULTI_TENANCY_DATABASE_USERNAME"] %>
+  password: <%= ENV["RAILS_RLS_FOR_MULTI_TENANCY_DATABASE_PASSWORD"] %>
 
 development:
   <<: *default
